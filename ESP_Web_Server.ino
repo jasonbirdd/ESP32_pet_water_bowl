@@ -40,8 +40,8 @@ String Nowday;
 String timeStamp;
 
 // Replace with your network credentials
-const char* ssid = "Jason_2.4G";
-const char* password = "0933660921";
+const char* ssid = "XXX";
+const char* password = "XXX";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -144,12 +144,12 @@ void loop(){
     max_Weight = Weight;
     }
   
-  if (Weight < 150){
+  if (Weight < 150){ // change lower threshold to alert and calculate comsumption
     min_Weight = pre_Weight;
     cousumpt_weight = cousumpt_weight+max_Weight-min_Weight;
     Serial.print("cousumpt_weight: ");
     Serial.println(cousumpt_weight);
-    while(Weight<250){
+    while(Weight<250){ // change fill water threshold to initialize max weight and stop alert
       Serial.print("fill water: ");
       Serial.println(Weight);
       Weight = readWeight();
