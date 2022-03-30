@@ -3,8 +3,8 @@
 
 #include <Arduino.h>
 
-#define HX711_SCK 14
-#define HX711_DT 12
+#define HX711_SCK 19
+#define HX711_DT 18
 
 extern void Init_Hx711();
 extern unsigned long HX711_Read(void);

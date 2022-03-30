@@ -20,12 +20,21 @@ copies or substantial portions of the Software. -->
       font-size: 2.5rem;
       text-align: center;
     }
+    h3 {
+	  font-family: Arial;
+      font-size: 1.5rem;
+      text-align: center;
+	}
   </style>
 </head>
 <body>
   <h2>阿醜喝水監視器</h2>
   <div id="chart-temperature" class="container"></div>
-  <div id="chart-humidity" class="container"></div>
+  <h3>今日喝水量(g)</h3>
+  <h3 id = "comsuption">%COMSUMPTION%</h3>
+  <div id = "chart-humidity" class="container"></div>
+  <h3>昨日喝水量(g)</h3>
+  <h3 id = "pre_comsuption">%PRE_COMSUMPTION% ;ml</h3>
   <div id="chart-pressure" class="container"></div>
 </body>
 <script>
@@ -66,9 +75,38 @@ setInterval(function ( ) {
       }
     }
   };
-  xhttp.open("GET", "/temperature", true);
+  xhttp.open("GET", "/weight", true);
   xhttp.send();
-}, 500 ) ;
+}, 3000 ) ;
+
+
+
+
+var consumption = document.getElementById("comsuption");
+
+setInterval(function ( ) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      consumption.innerHTML = parseInt(this.responseText);
+    }
+  };
+  xhttp.open("GET", "/cousumpt", true);
+  xhttp.send();
+}, 3000 ) ;
+
+var pre_comsuption = document.getElementById("pre_comsuption");
+
+setInterval(function ( ) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      pre_comsuption.innerHTML = parseInt(this.responseText);
+    }
+  };
+  xhttp.open("GET", "/pre_cousumpt", true);
+  xhttp.send();
+}, 30000 ) ;
 
 </script>
 </html>
