@@ -7,9 +7,12 @@
   
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
+  -------------------------------------------------------------
+  Kai Chun Jhan
+  revise ver.1
+  change to a project "Pet water bowl"
 *********/
 
-// Import required libraries
 
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>
@@ -153,7 +156,7 @@ void loop(){
       Serial.print("fill water: ");
       Serial.println(Weight);
       Weight = readWeight();
-      digitalWrite(4,HIGH);
+      digitalWrite(4,HIGH); // let buzzer trigger at GPIO 4
       delay(100);
       digitalWrite(4,LOW);
       delay(3000);
