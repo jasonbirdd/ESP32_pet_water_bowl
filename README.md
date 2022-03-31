@@ -35,15 +35,15 @@ After that, you have built a UI on ESP32 for monitoring the water bowl.
 Layout:
 ---
 ![image](https://user-images.githubusercontent.com/59694163/160986885-78cba70f-62c0-4f8a-804e-9ff4e8ef5e6f.png)  
-*HX711  
+#### HX711  
  VCC <--> 3v3  
  SCK <--> D19  
  DT <--> D18  
  GND <--> GND  
   
-*Buzzer  
- + <--> D4  
- - <--> GND  
+#### Buzzer  
+ \+ <--> D4  
+ \- <--> GND  
 
 User modify:
 ---
