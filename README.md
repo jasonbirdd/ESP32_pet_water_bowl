@@ -10,7 +10,8 @@ How much water is enough for your dog
 
 It’s hard to measure how much your dog or cat drink water a day. However, the daily water intake may signal a healthy problem.  According to some research, dogs and cats need to get 40~60cc/kg per day. But how can we calculate from the pet water bowl?  
 This device is my own design for recording the consumption of water from my dog today and yesterday. And you can trace the water level of the water bowl from your connected device, moreover, if the level is too low, the buzzer under the bowl will remind you to fill it.
-![746699BE-F97E-4A4E-9028-2C39B8B354C5](https://user-images.githubusercontent.com/59694163/160978082-e9a0fbcd-47e4-4d96-ae1e-4f6f6257efd8.jpg)
+![746699BE-F97E-4A4E-9028-2C39B8B354C5](https://user-images.githubusercontent.com/59694163/160978360-32f3da60-77fa-46b6-b376-3e568b2df99b.jpg)
+
 
 
 This IoT device is get much help from https://randomnerdtutorials.com/ & [https://reurl.cc/9Ol2kj](https://)
